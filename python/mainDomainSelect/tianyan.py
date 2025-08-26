@@ -1,8 +1,9 @@
 """
 爬取 https://www.tianyancha.com/
 使用方式：
-● 先在天眼直接搜索要查询的企业，复制在url里的id值；
-● 推荐先看看主域名到底有多少条数，再输入合适的每页读取数目；
+- 先在天眼直接搜索要查询的企业，复制在url里的id值；
+- 推荐先看看主域名到底有多少条数，再输入合适的每页读取数目；
+- 将运行结果输出到tianyan.txt里
 （脚本搬自practice4）
 """
 import requests
@@ -50,5 +51,5 @@ for k in range(1,upper+1):
     get_info(k)
 
 
-with open("result.txt","w",encoding='utf-8') as f:
+with open("tianyan.txt","w",encoding='utf-8') as f:
     f.writelines(url_list)
